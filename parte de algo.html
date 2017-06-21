@@ -1,0 +1,12 @@
+<tbody>
+                  {% for movie in object_list %}
+                  <tr>
+                    <td>{{movie.pk}}</td>
+                    <td><a href=#>{{movie.name}}</a></td>
+                    <td>{{movie.category.name}}</td>
+                    <td><a href="#">
+                      <span class="glyphicon glyphicon-trash"></span> Eliminar</a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+          </tbody>

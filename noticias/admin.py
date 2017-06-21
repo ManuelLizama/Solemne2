@@ -5,7 +5,7 @@ from django.contrib import admin
 from noticias.models import Category, Noticia
 
 class NoticiaAdmin(admin.ModelAdmin):
-	list_display = ('name','id')
+	list_display = ('name','id', 'category', 'created')
     
 
 class CategoryAdmin(admin.ModelAdmin):
