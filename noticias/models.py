@@ -18,7 +18,7 @@ class Noticia(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     imagen = models.ImageField( upload_to = 'static/images')
-    destacado = models.CharField(max_length=1, choices=DESTACADO_CHOICES)
+    destacado_choices = models.PositiveIntegerField(max_length=1, choices=DESTACADO_CHOICES)
 
 
     def __str__(self):

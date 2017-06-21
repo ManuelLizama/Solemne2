@@ -10,7 +10,7 @@ def index(request):
     
     data = {}
 
-    data['object_list'] = Noticia.objects.all().order_by('created')
+    data['object_list'] = Noticia.objects.all().order_by('destacado_choices', 'created')
     
     return render(request,'index.html',data)
 
